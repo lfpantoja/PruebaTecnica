@@ -62,18 +62,35 @@ PRUEBAS DE FUNCIONAMIENTO
 POST
 http://localhost:8080/api/clientes
 {
-    "nombre": "Juan Chochos",
+    "nombre": "Jose Lema",
     "genero": "Masculino",
     "edad": 30,
-    "identificacion": "ID1004",
+    "identificacion": "ID1001",
     "direccion": "Otavalo sn y principal",
-    "telefono": "098254786",
-    "contrasena": "1234",
+    "telefono": "098254785",
+    "contraseña": "1234",
     "estado": true
 }
-
-DELETE
-http://localhost:8080/api/clientes/8
+{
+    "nombre": "Marianela Montalvo",
+    "genero": "Femenino",
+    "edad": 29,
+    "identificacion": "ID1002",
+    "direccion": "Amazonas y NNUU",
+    "telefono": "097548965",
+    "contraseña": "5678",
+    "estado": true
+}
+{
+    "nombre": "Juan Osorio",
+    "genero": "Masculino",
+    "edad": 29,
+    "identificacion": "ID1003",
+    "direccion": "13 junio y Equinoccial",
+    "telefono": "098874587",
+    "contraseña": "1245",
+    "estado": true
+}
 {
     "nombre": "Juan Chochos",
     "genero": "Masculino",
@@ -85,8 +102,11 @@ http://localhost:8080/api/clientes/8
     "estado": true
 }
 
+DELETE
+http://localhost:8080/api/clientes/4
+
 PUT
-http://localhost:8080/api/clientes/5
+http://localhost:8080/api/clientes/1
 {
     "nombre": "Jose Lemas",
     "genero": "Masculino",
@@ -108,29 +128,65 @@ http://localhost:8080/api/cuentas
 POST
 http://localhost:8080/api/cuentas
 {
-    "numeroCuenta": "585545",
-    "tipoCuenta": "Corriente",
-    "saldoInicial": 1000,
-    "estado": true,
-    "cliente": {
-        "clienteId": 5
+        "numeroCuenta": "478758",
+        "tipoCuenta": "Ahorros",
+        "saldoInicial": 2000,
+        "estado": true,
+        "cliente": {
+            "clienteId": 1
+        }
     }
-}
+    {
+        "numeroCuenta": "225487",
+        "tipoCuenta": "Corriente",
+        "saldoInicial": 100,
+        "estado": true,
+        "cliente": {
+            "clienteId": 2
+        }
+    }
+    {
+        "numeroCuenta": "495878",
+        "tipoCuenta": "Ahorros",
+        "saldoInicial": 0,
+        "estado": true,
+        "cliente": {
+            "clienteId": 3
+        }
+    }
+    {
+        "numeroCuenta": "496825",
+        "tipoCuenta": "Ahorros",
+        "saldoInicial": 540,
+        "estado": true,
+        "cliente": {
+            "clienteId": 2
+        }
+    }
+    {
+        "numeroCuenta": "585545",
+        "tipoCuenta": "Corriente",
+        "saldoInicial": 1000,
+        "estado": true,
+        "cliente": {
+            "clienteId": 1
+        }
+    }
 
 PUT
-http://localhost:8080/api/cuentas/12
+http://localhost:8080/api/cuentas/5
 {
-    "numeroCuenta": "000001",
-    "tipoCuenta": "Ahorros",
-    "saldoInicial": 1,
+    "numeroCuenta": "585545",
+    "tipoCuenta": "Corriente",
+    "saldoInicial": 1001,
     "estado": true,
     "cliente": {
-        "clienteId": 8
+        "clienteId": 1
     }
 }
 
 DELETE
-http://localhost:8080/api/cuentas/12
+http://localhost:8080/api/cuentas/5
 
 
 ----MOVIMIENTOS----
@@ -140,7 +196,7 @@ http://localhost:8080/api/movimientos
     "tipoMovimiento": "Retiro",
     "valor": -15,
     "cuenta": {
-        "id": 11
+        "id": 1
     }
 }
 
